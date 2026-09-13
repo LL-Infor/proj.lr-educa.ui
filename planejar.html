@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANEJAR AULA LR-EDUCA | Gestão Educacional</title>
+    <link rel="stylesheet" href="styleplanejar.css" />    
+  </head>
+
+  <body>
+    <!-- Cabeçalho Principal (Fixo no Topo) -->
+    <header class="header">
+      <div class="header-logo">
+        <img src="/assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/>
+      </div>
+      <div>
+           <span><h3>Projeto Integrador II</h3></span>
+      </div>
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu principal">☰</button>
+
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html">Funcionalidades</a>
+        <button type="button" class="botao-nav"><a href="index.html">Sair</button></a>
+      </nav>
+    </header>
+
+    <!-- Estrutura Lado a Lado (Sidebar + Main) -->
+    <div class="app-layout">
+      <!-- Sidebar Fixa na Lateral Esquerda -->
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+
+          <nav class="side-nav">
+            <ul>
+              <li>
+                <a href="/dash.html"><i class="fa-solid fa-house"></i> Início</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user-graduate"></i> Alunos</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-clipboard-user"></i> Frequência</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book-open"></i> Notas</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-calendar-check"></i> Planejamento</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-file-pdf"></i> Relatórios</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-calendar-days"></i> Calendário</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-users"></i> Reuniões</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notificações</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user"></i> Perfil</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-headset"></i> Suporte</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Conteúdo Principal (Empurrado para o lado da Sidebar) -->
+      <main class="conteudo-principal">
+        <!-- Seção: Funcionalidades -->
+        <section id="funcionalidades" class="secao">
+          <div class="container">
+            <h2>Planejar Aula</h2>
+
+            <div><a class="btn btn-secundary" href="/dash.html">Voltar</a></div>
+            <br>
+
+           <div class="grid">
+            <!-- Formulario Planejar Aula -->
+              <article class="planejamento">
+    <div class="card-planejamento">
+
+        <h2>Novo planejamento</h2>
+
+        <form>
+            <div class="grid-2">
+                <div class="campo">
+                    <label>Turma</label>
+                    <select>
+                        <option>7º Ano A</option>
+                        <option>7º Ano B</option>
+                        <option>8º Ano A</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>Data da aula</label>
+                    <input type="date">
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="campo">
+                    <label>Disciplina</label>
+                    <input type="text" placeholder="Ex.: Matemática">
+                </div>
+                <div class="campo">
+                    <label>Professor</label>
+                    <input type="text" placeholder="Professor(a)">
+                </div>
+            </div>
+            <div class="campo">
+                <label>Conteúdo</label>
+                <textarea rows="4"
+                    placeholder="Conteúdo que será trabalhado."></textarea>
+            </div>
+            <div class="campo">
+                <label>Objetivos e metodologia</label>
+                <textarea rows="6"
+                    placeholder="Descreva os objetivos, metodologia e recursos."></textarea>
+            </div>
+            <button type="submit" class="btn-salvar">
+                Salvar planejamento
+            </button>
+        </form>
+    </div>
+</article>
+<!-- Final Formulario Planejar Aula -->
+
+              </div>
+          </div>
+        </section>
+
+       </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos PI</p>
+    </footer>
+
+      <script>
+    function toggleMenu(){
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+  </body>
+</html>

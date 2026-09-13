@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGIN LR-EDUCA | Gestão Educacional</title>
+  <link rel="stylesheet" href="login.css" /> 
+
+  </head>
+
+<body>
+
+<div class="login-container">
+
+  <h1>
+    <img src="/assets/LogoLREduca.png" alt="Logo LR-EDUCA">
+  </h1>
+
+  <p>Acesso ao Sistema de Gestão Educacional</p>
+
+  <form action="dash.html" method="post">
+
+    <label for="perfil">Perfil de Acesso</label>
+    <select id="perfil" name="perfil" required>
+      <option value="">Selecione o perfil</option>
+      <option>Diretor(a)</option>
+      <option>Supervisor(a)</option>
+      <option>Professor(a)</option>
+      <option>Coordenador(a)</option>
+      <option>Secretário(a)</option>
+    </select>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="email@instituicao.com" required />
+
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" name="senha" placeholder="********" required />
+
+    <button type="submit" class="btn btn-login" onclick="window.location.href='/dash.html'">Entrar</button>
+
+    <button type="button" class="btn btn-voltar" onclick="window.location.href='/index.html'">
+      Voltar
+    </button>
+
+    <div class="links">
+      <a href="/index.html">Esqueci minha senha</a>
+    </div>
+
+  </form>
+
+  <div class="footer-text">
+    LR-EDUCA © 2026<br>
+    Criadores: Grupo 01 – Capitão de Campos - PI
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* STILO INDEX LR-EDUCA */
+    :root{
+      --verde:#1b8f4d;
+      --verde-claro:#2ecc71;
+      --escuro:#1f2933;
+      --cinza:#f5f7f6;
+      --branco:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--escuro);
+      background:var(--cinza);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(90deg,var(--verde),var(--verde-claro));
+      color:var(--branco);
+      padding:16px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    header .logo{font-weight:bold;font-size:20px}
+    nav{
+      display:flex;
+      gap:16px;
+    }
+    nav a{
+      color:var(--branco);
+      text-decoration:none;
+      font-weight:bold;
+      font-size:14px;
+    }
+    .menu-toggle{display:none;font-size:22px;cursor:pointer}
+
+    .hero{
+      padding:60px 20px;
+      background:var(--branco);
+      text-align:center;
+    }
+    .hero h1{margin-bottom:10px}
+    .hero p{max-width:720px;margin:0 auto 20px}
+    .hero a{
+      background:var(--verde);
+      color:var(--branco);
+      padding:12px 24px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section{padding:40px 20px}
+    .container{max-width:1100px;margin:auto}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateY(-6px);
+    }
+
+
+    .card{
+      background:var(--branco);
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+    .card h3{margin-top:0;color:var(--verde)}
+
+    
+    .card:hover {
+      /* Move o card 10 pixels para cima no eixo Y */
+      transform: translateY(-10px); 
+      
+      /* Deixa a sombra mais intensa para parecer que subiu */
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); 
+    }
+
+    footer{
+      background:var(--escuro);
+      color:var(--branco);
+      text-align:center;
+      padding:20px 10px;
+      font-size:14px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width:768px){
+      nav{
+        display:none;
+        position:absolute;
+        top:60px;
+        right:0;
+        background:var(--verde);
+        flex-direction:column;
+        width:200px;
+        padding:10px;
+      }
+      nav.active{display:flex}
+      .menu-toggle{display:block}
+    }
