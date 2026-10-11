@@ -1,142 +1,53 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DASHBOAD LR-EDUCA | Gestão Educacional</title>
-    <link rel="stylesheet" href="styledashof.css" />    
-  </head>
-
-  <body>
-    <!-- Cabeçalho Principal (Fixo no Topo) -->
-    <header class="header">
-      <div class="header-logo">
-        <img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/>
-      </div>
-      <div>
-           <span><h3>Projeto Integrador II</h3></span>
-      </div>
-
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu principal">☰</button>
-
-      <nav id="nav" class="nav-header">
-        <a href="dash.html">Início</a>
-        <a href="#funcionalidades">Funcionalidades</a>
-        <a href="#contato">Contato</a>
-        <button type="button" class="botao-nav"><a href="index.html">Sair</button></a>
-      </nav>
-    </header>
-
-    <!-- Estrutura Lado a Lado (Sidebar + Main) -->
-    <div class="app-layout">
-      <!-- Sidebar Fixa na Lateral Esquerda -->
-      <aside class="sidebar">
-        <div class="side-content">
-          <h3 class="side-title">Gestão Educacional</h3>
-
-          <nav class="side-nav">
-            <ul>
-              <li>
-                <a href="dash.html"><i class="fa-solid fa-house"></i> Início</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-user-graduate"></i> Alunos</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-clipboard-user"></i> Frequência</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-book-open"></i> Notas</a>
-              </li>
-              <li>
-                <a href="planejar.html"><i class="fa-solid fa-calendar-check"></i> Planejamento</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-file-pdf"></i> Relatórios</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-calendar-days"></i> Calendário</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-users"></i> Reuniões</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-bell"></i> Notificações</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-user"></i> Perfil</a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-solid fa-headset"></i> Suporte</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </aside>
-
-      <!-- Conteúdo Principal (Empurrado para o lado da Sidebar) -->
-      
-      <main class="conteudo-principal">
-        <!-- Seção: Funcionalidades -->
-        <section id="funcionalidades" class="secao">
-          <div class="container">
-            <h2>Funcionalidades</h2>
-             <br>
-
-            <div class="grid">
-              <article class="card">
-                <img src="assets/PlanejarAula.png" alt="Planejamento de Aulas"/>
-                <a class="btn btn-primary" href="planejar.html">+ Planejar aula</a>
-              </article>
-
-              <article class="card">
-                <img src="assets/Frequencia.png" alt="Frequência"/>
-                <a class="btn btn-primary" href="#">Lançar Frequência</a>
-              </article>
-
-              <article class="card">
-                <img src="assets/Notas.png" alt="Notas"/>
-                <a class="btn btn-primary" href="#">Lançar Notas</a>
-              </article>
-
-              <article class="card">
-                <img src="assets/Relatorio.png" alt="Relatórios"/>
-                <a class="btn btn-primary" href="#">Relatórios</a>
-              </article>
-
-              <article class="card">
-                <img src="assets/Calendário.png" alt="Calendário"/>
-                <a class="btn btn-primary" href="#">Calendário</a>
-              </article>
-
-              <article class="card">
-                <img src="assets/BotãoUsuario.png" alt="Perfis de Usuário"/>
-                <a class="btn btn-primary" href="#">Perfil</a>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <!-- Seção: Contato -->
-        <section id="contato" class="secao">
-          <div class="container">
-            <h2>Contato</h2>
-            <p><strong>Email:</strong> lr_educa@gmail.com</p>
-            <p><strong>Telefone:</strong> (86) 99541-7852</p>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos PI</p>
-    </footer>
-
-      <script>
-    function toggleMenu(){
-      document.getElementById('nav').classList.toggle('active');
-    }
-  </script>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Painel principal do LR-EDUCA — Gestão Educacional">
+<title>Dashboard | LR-EDUCA</title>
+<link rel="stylesheet" href="styledashof.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+<a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"></a>
+<h3>Projeto Integrador II</h3>
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false">☰</button>
+<nav id="nav" class="nav-header"><a href="dash.html">Início</a><a href="dash.html#funcionalidades">Funcionalidades</a><a href="dash.html#contato">Contato</a><button class="botao-nav" type="button"><a href="index.html">Sair</a></button></nav>
+</header>
+<div class="app-layout">
+<aside class="sidebar"><div class="side-content"><h3 class="side-title">Gestão Educacional</h3><nav class="side-nav"><ul><li><a class="active" href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a></li><li><a href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a></li><li><a href="#"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a></li><li><a href="#"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a></li><li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a></li><li><a href="#"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a></li><li><a href="#"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a></li><li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a></li><li><a href="#"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a></li><li><a href="#"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a></li><li><a href="#"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a></li></ul></nav></div></aside>
+<main class="conteudo-principal">
+<div class="container dashboard-container">
+<section class="welcome-panel">
+<div class="welcome-copy">
+<span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> SISTEMA DE GESTÃO EDUCACIONAL</span>
+<h1>Bem-vindo ao <strong>LR-EDUCA</strong></h1>
+<p>Organize a rotina escolar em um só lugar. Acesse rapidamente as principais ferramentas de gestão.</p>
+<div class="welcome-actions"><a class="btn btn-white" href="alunos.html"><i class="fa-solid fa-user-graduate"></i> Gestão de alunos</a><a class="btn btn-outline-white" href="planejar.html"><i class="fa-solid fa-calendar-check"></i> Planejar aula</a></div>
+</div>
+<div class="welcome-symbol"><i class="fa-solid fa-school"></i></div>
+</section>
+<section class="dashboard-stats" aria-label="Resumo do sistema">
+<article class="stat-card"><span class="stat-icon"><i class="fa-solid fa-user-graduate"></i></span><div><div class="label">Gestão de alunos</div><div class="stat-description">Cadastro e consulta de estudantes</div></div><a href="alunos.html" aria-label="Abrir gestão de alunos"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+<article class="stat-card"><span class="stat-icon"><i class="fa-solid fa-chalkboard-user"></i></span><div><div class="label">Professores</div><div class="stat-description">Equipe pedagógica</div></div><a href="professores.html" aria-label="Abrir professores"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+<article class="stat-card"><span class="stat-icon"><i class="fa-solid fa-people-roof"></i></span><div><div class="label">Turmas</div><div class="stat-description">Organização do ano letivo</div></div><a href="turmas.html" aria-label="Abrir turmas"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+</section>
+<section id="funcionalidades" class="dashboard-section">
+<div class="section-heading"><div><h2>Funcionalidades</h2><p>Selecione uma área para continuar.</p></div><span class="section-tag"><i class="fa-solid fa-grid-2"></i> Acesso rápido</span></div>
+<div class="feature-grid">
+<article class="feature-card"><span class="feature-icon"><i class="fa-solid fa-calendar-check"></i></span><h3>Planejamento de aula</h3><p>Prepare conteúdos, objetivos e datas das aulas.</p><a class="feature-link" href="planejar.html">Acessar planejamento <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="feature-card"><span class="feature-icon"><i class="fa-solid fa-user-graduate"></i></span><h3>Alunos</h3><p>Cadastre estudantes e consulte os registros existentes.</p><a class="feature-link" href="alunos.html">Acessar alunos <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="feature-card"><span class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></span><h3>Professores</h3><p>Consulte os dados da equipe docente.</p><a class="feature-link" href="professores.html">Acessar professores <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="feature-card"><span class="feature-icon"><i class="fa-solid fa-people-roof"></i></span><h3>Turmas</h3><p>Organize as turmas e o respectivo ano letivo.</p><a class="feature-link" href="turmas.html">Acessar turmas <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="feature-card muted-feature"><span class="feature-icon"><i class="fa-solid fa-clipboard-check"></i></span><h3>Frequência</h3><p>Área preparada para o acompanhamento de presença.</p><a class="feature-link" href="#">Em desenvolvimento <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="feature-card muted-feature"><span class="feature-icon"><i class="fa-solid fa-book-open"></i></span><h3>Notas</h3><p>Área preparada para o acompanhamento de notas.</p><a class="feature-link" href="#">Em desenvolvimento <i class="fa-solid fa-arrow-right"></i></a></article>
+</div>
+</section>
+<section id="contato" class="contact-panel"><div class="contact-icon"><i class="fa-solid fa-headset"></i></div><div><h2>Precisa de ajuda?</h2><p>Entre em contato com a equipe do LR-EDUCA.</p></div><div class="contact-details"><a href="mailto:lr_educa@gmail.com"><i class="fa-solid fa-envelope"></i> lr_educa@gmail.com</a><a href="tel:+5586995417852"><i class="fa-solid fa-phone"></i> (86) 99541-7852</a></div></section>
+</div>
+</main>
+</div>
+<footer class="footer"><p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p></footer>
+<script>function toggleMenu(){const nav=document.getElementById('nav');nav.classList.toggle('active');document.querySelector('.menu-toggle').setAttribute('aria-expanded',nav.classList.contains('active'));}</script>
+</body></html>
