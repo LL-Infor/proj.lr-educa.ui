@@ -1,6 +1,141 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="LR-EDUCA — Gestão Educacional"><title>Cadastro de Aluno | LR-EDUCA</title><link rel="stylesheet" href="stylealuno-form.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head><body>
-<header class="header"><a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"></a><h3>Projeto Integrador II</h3><button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">☰</button><nav id="nav" class="nav-header"><a href="dash.html">Início</a><a href="alunos.html">Funcionalidades</a><button class="botao-nav" type="button"><a href="index.html">Sair</a></button></nav></header>
-<div class="app-layout"><aside class="sidebar"><div class="side-content"><h3 class="side-title">Gestão Educacional</h3><nav class="side-nav"><ul><li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a></li><li><a class="active" href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a></li><li><a href="#"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a></li><li><a href="#"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a></li><li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a></li><li><a href="#"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a></li><li><a href="#"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a></li><li><a href="#"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Reuniões</span></a></li><li><a href="#"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a></li><li><a href="#"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a></li><li><a href="#"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a></li></ul></nav></div></aside><main class="conteudo-principal"><div class="container"><a class="btn btn-light top-back" href="alunos.html">← Voltar para Alunos</a><div class="page-heading"><div><h1>Cadastro de Aluno</h1><p>Informe os dados do estudante para realizar o cadastro.</p></div></div><div id="notice" class="notice" role="status"></div><section class="form-card"><h2>Dados pessoais</h2><p class="panel-subtitle" style="margin-bottom:20px">Os campos com * são obrigatórios.</p><form data-form="aluno"><div class="field-grid"><div class="field"><label for="nome">Nome completo <span class="required">*</span></label><input id="nome" name="nome" required maxlength="150" placeholder="Digite o nome completo"></div><div class="field"><label for="email">E-mail <span class="required">*</span></label><input id="email" name="email" type="email" required maxlength="150" placeholder="aluno@exemplo.com"></div><div class="field"><label for="dataNascimento">Data de nascimento</label><input id="dataNascimento" name="dataNascimento" type="date"></div><div class="field"><label for="ativo">Situação</label><select id="ativo" name="ativo"><option value="true">Ativo</option><option value="false">Inativo</option></select></div><div class="field full"><label for="endereco">Endereço</label><input id="endereco" name="endereco" maxlength="255" placeholder="Rua, número, bairro e cidade"></div></div><div class="form-actions"><a class="btn btn-light" href="alunos.html">Cancelar</a><button class="btn btn-primary" type="submit">Salvar aluno</button></div></form><p class="small-note">A API deve estar disponível em http://localhost:8080 para envio direto. Se não estiver, a tela guarda uma cópia local de demonstração.</p></section></div></main></div><footer class="footer"><p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p></footer><script src="ui.js"></script><script>function toggleMenu(){document.getElementById("nav").classList.toggle("active");}</script>
-</body></html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LR-EDUCA — Gestão Educacional" />
+    <title>Cadastro de Aluno | LR-EDUCA</title>
+    <link rel="stylesheet" href="stylealuno-form.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/></a>
+      <h3>Projeto Integrador II</h3>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu"> ☰ </button>
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html#funcionalidades">Funcionalidades</a>
+        <a href="dash.html#contato">Contato</a>
+        <button class="botao-nav" type="button"><a href="index.html">Sair</a>
+        </button>
+      </nav>
+    </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+          <nav class="side-nav">
+            <ul>
+              <li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+              </li>
+              <li><a class="active" href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a>
+              </li>
+              <li><a href="frequencia.html"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a>
+              </li>
+              <li><a href="notas.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a>
+              </li>
+              <li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a>
+              </li>
+              <li><a href="relatorios.html"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a>
+              </li>
+              <li><a href="calendario.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a>
+              </li>
+              <li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a>
+              </li>
+              <li><a href="notificacoes.html"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a>
+              </li>
+              <li><a href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+              </li>
+              <li><a href="suporte.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="conteudo-principal">
+        <div class="container">
+          <a class="btn btn-light top-back" href="alunos.html">← Voltar para Alunos</a>
+          <div class="page-heading">
+            <div>
+              <h1>Cadastro de Aluno</h1>
+              <p>Informe os dados do estudante para realizar o cadastro.</p>
+            </div>
+          </div>
+          <div id="notice" class="notice" role="status"></div>
+          <section class="form-card">
+            <h2>Dados pessoais</h2>
+            <p class="panel-subtitle" style="margin-bottom: 20px">
+              Os campos com * são obrigatórios.
+            </p>
+            <form data-form="aluno">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="nome"
+                    >Nome completo <span class="required">*</span></label>
+                    <input
+                    id="nome"
+                    name="nome"
+                    required
+                    maxlength="150"
+                    placeholder="Digite o nome completo"/>
+                </div>
+                <div class="field">
+                  <label for="email">E-mail <span class="required">*</span></label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    maxlength="150"
+                    placeholder="aluno@exemplo.com"/>
+                </div>
+                <div class="field">
+                  <label for="dataNascimento">Data de nascimento</label>
+                  <input
+                    id="dataNascimento"
+                    name="dataNascimento"
+                    type="date"/>
+                </div>
+                <div class="field">
+                  <label for="ativo">Situação</label>
+                  <select id="ativo" name="ativo">
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="endereco">Endereço</label>
+                  <input
+                    id="endereco"
+                    name="endereco"
+                    maxlength="255"
+                    placeholder="Rua, número, bairro e cidade"/>
+                </div>
+              </div>
+              <div class="form-actions">
+                <a class="btn btn-light" href="alunos.html">Cancelar</a>
+                <button class="btn btn-primary" type="submit">Salvar aluno</button>
+              </div>
+            </form>
+            <p class="small-note">
+              A API deve estar disponível em http://localhost:8080 para envio
+              direto. Se não estiver, a tela guarda uma cópia local de
+              demonstração, Equipe LR-Educa.
+            </p>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p>
+    </footer>
+    <script src="ui.js"></script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

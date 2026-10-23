@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perfil do sistema LR-EDUCA" />
+    <title>Perfil | LR-EDUCA</title>
+    <link rel="stylesheet" href="styleperfil.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/></a>
+      <h3>Projeto Integrador II</h3>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false"> ☰ </button>
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html#funcionalidades">Funcionalidades</a>
+        <a href="dash.html#contato">Contato</a>
+        <button class="botao-nav" type="button"><a href="index.html">Sair</a>
+        </button>
+      </nav>
+    </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+          <nav class="side-nav">
+            <ul>
+              <li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+              </li>
+              <li><a href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a>
+              </li>
+              <li><a href="frequencia.html"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a>
+              </li>
+              <li><a href="notas.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a>
+              </li>
+              <li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a>
+              </li>
+              <li><a href="relatorios.html"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a>
+              </li>
+              <li><a href="calendario.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a>
+              </li>
+              <li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a>
+              </li>
+              <li><a href="notificacoes.html"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a>
+              </li>
+              <li><a class="active" href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+              </li>
+              <li><a href="suporte.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="conteudo-principal">
+        <div class="container">
+          <section class="page-intro">
+            <div class="intro-icon"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <span class="eyebrow">CONTA DO USUÁRIO</span>
+              <h1>Perfil</h1>
+              <p>Consulte e atualize as informações básicas do seu perfil.</p>
+            </div>
+          </section>
+          <div id="notice" class="notice" role="status" aria-live="polite"></div>
+          <div id="module-content">
+            <section class="split">
+              <section class="form-card">
+                <div class="form-card-heading">
+                  <span class="form-heading-icon"><i class="fa-solid fa-id-card"></i>
+                  </span>
+                  <div>
+                    <h2>Dados do perfil</h2>
+                    <p class="panel-subtitle">
+                      Edite os dados demonstrativos da sua conta.
+                    </p>
+                  </div>
+                </div>
+                <form id="formPerfil">
+                  <div class="field">
+                    <label for="nomePerfil">Nome completo <span class="required">*</span></label>
+                    <input id="nomePerfil" name="nome" required maxlength="120"placeholder="Nome completo"/>
+                  </div>
+                  <div class="field">
+                    <label for="emailPerfil">E-mail <span class="required">*</span></label>
+                    <input id="emailPerfil" name="email" type="email" required placeholder="nome@escola.edu.br"/>
+                  </div>
+                  <div class="field">
+                    <label for="cargoPerfil">Perfil de acesso</label>
+                    <select id="cargoPerfil" name="cargo">
+                      <option>Professor(a)</option>
+                      <option>Secretário(a)</option>
+                      <option>Coordenador(a)</option>
+                      <option>Diretor(a)</option>
+                      <option>Supervisor(a)</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="escolaPerfil">Escola</label>
+                    <input id="escolaPerfil" name="escola" placeholder="Nome da instituição"/>
+                  </div>
+                  <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">
+                      <i class="fa-solid fa-floppy-disk"></i> Salvar perfil
+                    </button>
+                  </div>
+                </form>
+              </section>
+              <section class="panel profile-card">
+                <div class="profile-avatar" id="avatarPerfil">U</div>
+                <h2 id="nomeResumo">Usuário</h2>
+                <p id="emailResumo" class="panel-subtitle">
+                  E-mail não informado
+                </p>
+                <span class="badge" id="cargoResumo">Professor(a)</span>
+                <div class="profile-details">
+                  <p>
+                    <i class="fa-solid fa-school"></i>
+                    <span id="escolaResumo">Escola não informada</span>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-circle-info"></i> Perfil demonstrativo
+                  </p>
+                </div>
+              </section>
+              <section class="recovery-card" aria-labelledby="page-title">
+              <div class="icon-lock" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4.5" y="10" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="12" cy="15.5" r="1.2" fill="currentColor"/>
+                <path d="M12 16.7v1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <h1 id="page-title">Redefinir senha</h1>
+            <p class="intro">Preencha os campos abaixo para cadastrar uma nova senha de acesso ao LR-EDUCA.</p>
+
+            <form id="reset-form">
+              <label for="email">E-mail institucional</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@instituicao.com" autocomplete="email" required>
+
+              <label for="codigo">Código de recuperação</label>
+              <input type="text" id="codigo" name="codigo" placeholder="Digite o código recebido" autocomplete="one-time-code" inputmode="numeric" required>
+
+              <label for="senha">Nova senha</label>
+              <input type="password" id="senha" name="senha" placeholder="Crie uma nova senha" autocomplete="new-password" minlength="8" required>
+              <small class="field-hint">Use pelo menos 8 caracteres.</small>
+
+              <label for="confirmar-senha">Confirmar nova senha</label>
+              <input type="password" id="confirmar-senha" name="confirmarSenha" placeholder="Digite a senha novamente" autocomplete="new-password" minlength="8" required>
+
+              <button type="submit" class="btn-submit">Redefinir senha</button>
+            </form>
+
+                  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+                  <p class="help-text">Por segurança, use apenas um código de recuperação válido enviado pela instituição. Se precisar de ajuda, procure a secretaria escolar.</p>
+            </section>
+            </section>
+            <p class="small-note">
+              Os dados deste protótipo são salvos no navegador e não alteram
+              credenciais ou usuários no servidor.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p>
+    </footer>
+    <script src="ui.js"></script>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("nav");
+        nav.classList.toggle("active");
+        document
+          .querySelector(".menu-toggle")
+          .setAttribute("aria-expanded", nav.classList.contains("active"));
+      }
+    </script>
+  </body>
+</html>

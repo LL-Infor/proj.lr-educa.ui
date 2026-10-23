@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notas do sistema LR-EDUCA" />
+    <title>Notas | LR-EDUCA</title>
+    <link rel="stylesheet" href="stylenotas.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/></a>
+      <h3>Projeto Integrador II</h3>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false"> ☰ </button>
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html#funcionalidades">Funcionalidades</a>
+        <a href="dash.html#contato">Contato</a>
+        <button class="botao-nav" type="button"><a href="index.html">Sair</a>
+        </button>
+      </nav>
+    </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+          <nav class="side-nav">
+            <ul>
+              <li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+              </li>
+              <li><a href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a>
+              </li>
+              <li><a href="frequencia.html"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a>
+              </li>
+              <li><a class="active" href="notas.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a>
+              </li>
+              <li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a>
+              </li>
+              <li><a href="relatorios.html"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a>
+              </li>
+              <li><a href="calendario.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a>
+              </li>
+              <li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a>
+              </li>
+              <li><a href="notificacoes.html"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a>
+              </li>
+              <li><a href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+              </li>
+              <li><a href="suporte.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="conteudo-principal">
+        <div class="container">
+          <section class="page-intro">
+            <div class="intro-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div>
+              <span class="eyebrow">AVALIAÇÃO DA APRENDIZAGEM</span>
+              <h1>Notas</h1>
+              <p>Registre avaliações e acompanhe as médias dos estudantes.</p>
+            </div>
+          </section>
+          <div id="notice" class="notice" role="status" aria-live="polite"></div>
+          <div id="module-content">
+            <section class="planning-tips">
+              <i class="fa-solid fa-circle-info"></i><span
+                >Informe a nota usando valores de 0 a 10. A média exibida é
+                calculada com as notas cadastradas neste navegador.</span>
+            </section>
+            <section class="form-card">
+              <div class="form-card-heading">
+                <span class="form-heading-icon"
+                  ><i class="fa-solid fa-pen-to-square"></i></span>
+                <div>
+                  <h2>Lançar nota</h2>
+                  <p class="panel-subtitle">
+                    Cadastre uma avaliação para um estudante.
+                  </p>
+                </div>
+              </div>
+              <form id="formNotas">
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="alunoNota"
+                      >Nome do aluno <span class="required">*</span></label>
+                      <input id="alunoNota" name="aluno" required placeholder="Nome completo"/>
+                  </div>
+                  <div class="field">
+                    <label for="turmaNota">Turma <span class="required">*</span></label>
+                    <input id="turmaNota" name="turma" required placeholder="Ex.: 4º Ano A"/>
+                  </div>
+                  <div class="field">
+                    <label for="disciplinaNota">Disciplina <span class="required">*</span></label>
+                    <input id="disciplinaNota" name="disciplina" required placeholder="Ex.: Português"/>
+                  </div>
+                  <div class="field">
+                    <label for="avaliacao">Avaliação <span class="required">*</span></label>
+                    <input id="avaliacao" name="avaliacao" required placeholder="Ex.: Prova bimestral"/>
+                  </div>
+                  <div class="field">
+                    <label for="nota">Nota (0 a 10) <span class="required">*</span></label>
+                    <input id="nota" name="nota" type="number" min="0" max="10" step="0.1" required placeholder="0,0"/>
+                  </div>
+                  <div class="field">
+                    <label for="dataNota">Data da avaliação <span class="required">*</span></label>
+                    <input id="dataNota" name="data" type="date" required />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar nota
+                  </button>
+                </div>
+              </form>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Notas registradas</h2>
+                  <p class="panel-subtitle">
+                    Consulte as notas e a média por estudante.
+                  </p>
+                </div>
+                <input
+                  id="buscarNotas" class="search-input" placeholder="Buscar aluno, turma ou disciplina" aria-label="Buscar notas"/>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Aluno</th>
+                      <th>Turma</th>
+                      <th>Disciplina</th>
+                      <th>Avaliação</th>
+                      <th>Nota</th>
+                      <th>Data</th>
+                      <th>Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody id="listaNotas">
+                    <tr>
+                      <td colspan="7" class="empty">
+                        Nenhuma nota cadastrada.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="small-note" id="resumoMedias">
+                As médias aparecerão após o lançamento das notas.
+              </p>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p>
+    </footer>
+    <script src="ui.js"></script>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("nav");
+        nav.classList.toggle("active");
+        document
+          .querySelector(".menu-toggle")
+          .setAttribute("aria-expanded", nav.classList.contains("active"));
+      }
+    </script>
+  </body>
+</html>

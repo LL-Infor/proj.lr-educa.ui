@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar senha | LR-EDUCA</title>
+  <link rel="stylesheet" href="esqueci-senha.css">
+</head>
+<body>
+  <main class="recovery-container">
+    <a class="back-link" href="./login.html" aria-label="Voltar para o login">← Voltar ao login</a>
+
+    <section class="recovery-card" aria-labelledby="page-title">
+      <div class="logo-wrap">
+        <img src="assets/LogoLREducagren.png" alt="Logo LR-EDUCA" class="logo">
+      </div>
+
+      <div class="icon-lock" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="4.5" y="10" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="15.5" r="1.2" fill="currentColor"/>
+          <path d="M12 16.7v1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <h1 id="page-title">Esqueceu sua senha?</h1>
+      <p class="intro">Não se preocupe. Informe seu e-mail institucional e veja as instruções para recuperar o acesso ao LR-EDUCA.</p>
+
+      <form id="recovery-form">
+        <label for="email">E-mail institucional</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@instituicao.com" autocomplete="email" required>
+        <button type="submit" class="btn-submit">Solicitar recuperação</button>
+      </form>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+      <p class="help-text">Se não conseguir acessar seu e-mail, entre em contato com a secretaria da instituição.</p>
+    </section>
+
+    <footer class="footer-text">
+      <span>LR-EDUCA © 2026</span>
+      <span>Criadores: Grupo 01 — Capitão de Campos - PI</span>
+    </footer>
+  </main>
+
+  <script>
+    const form = document.getElementById('recovery-form');
+    const notice = document.getElementById('notice');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      notice.textContent = 'Solicitação validada na interface. A recuperação real depende da implementação de um serviço de envio de e-mail na API.';
+      notice.className = 'notice show info';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notificações do sistema LR-EDUCA" />
+    <title>Notificações | LR-EDUCA</title>
+    <link rel="stylesheet" href="stylenotificacoes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/></a>
+      <h3>Projeto Integrador II</h3>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false"> ☰ </button>
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html#funcionalidades">Funcionalidades</a>
+        <a href="dash.html#contato">Contato</a>
+        <button class="botao-nav" type="button"><a href="index.html">Sair</a>
+        </button>
+      </nav>
+    </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+          <nav class="side-nav">
+            <ul>
+              <li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+              </li>
+              <li><a href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a>
+              </li>
+              <li><a href="frequencia.html"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a>
+              </li>
+              <li><a href="notas.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a>
+              </li>
+              <li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a>
+              </li>
+              <li><a href="relatorios.html"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a>
+              </li>
+              <li><a href="calendario.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a>
+              </li>
+              <li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a>
+              </li>
+              <li><a class="active" href="notificacoes.html"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a>
+              </li>
+              <li><a href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+              </li>
+              <li><a href="suporte.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="conteudo-principal">
+        <div class="container">
+          <section class="page-intro">
+            <div class="intro-icon"><i class="fa-solid fa-bell"></i></div>
+            <div>
+              <span class="eyebrow">COMUNICAÇÃO ESCOLAR</span>
+              <h1>Notificações</h1>
+              <p>
+                Acompanhe avisos e mantenha as informações importantes
+                organizadas.
+              </p>
+            </div>
+          </section>
+          <div id="notice" class="notice" role="status" aria-live="polite"></div>
+          <div id="module-content">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Central de notificações</h2>
+                  <p class="panel-subtitle">
+                    Avisos de demonstração para o protótipo. A API poderá
+                    fornecer notificações reais futuramente.
+                  </p>
+                </div>
+                <button class="btn btn-secondary" id="marcarTodasLidas" type="button">
+                  <i class="fa-solid fa-check-double"></i> Marcar todas como lidas </button>
+              </div>
+              <div id="listaNotificacoes" class="notification-list">
+                <article class="notification-item">
+                  <span class="notification-icon">
+                    <i class="fa-solid fa-circle-info"></i></span>
+                  <div class="notification-body">
+                    <strong>Bem-vindo ao LR-EDUCA</strong>
+                    <p>
+                      Esta área reunirá avisos acadêmicos e comunicados da
+                      escola.
+                    </p>
+                    <small>Mensagem do sistema · Demonstração</small>
+                  </div>
+                  <button class="icon-btn" type="button" data-read="welcome">Marcar lida</button>
+                </article>
+                <article class="notification-item">
+                  <span class="notification-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                  </span>
+                  <div class="notification-body">
+                    <strong>Organize o calendário escolar</strong>
+                    <p>Cadastre avaliações, reuniões e atividades na agenda.</p>
+                    <small>Dica · Demonstração</small>
+                  </div>
+                  <button class="icon-btn" type="button" data-read="calendar">Marcar lida</button>
+                </article>
+                <article class="notification-item">
+                  <span class="notification-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </span>
+                  <div class="notification-body">
+                    <strong>Proteção de dados</strong>
+                    <p>
+                      Use dados fictícios durante os testes deste protótipo.
+                    </p>
+                    <small>Segurança · Demonstração</small>
+                  </div>
+                  <button class="icon-btn" type="button" data-read="privacy">Marcar lida</button>
+                </article>
+              </div>
+              <p class="small-note">
+                O estado de leitura é guardado localmente no navegador.
+              </p>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p>
+    </footer>
+    <script src="ui.js"></script>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("nav");
+        nav.classList.toggle("active");
+        document
+          .querySelector(".menu-toggle")
+          .setAttribute("aria-expanded", nav.classList.contains("active"));
+      }
+    </script>
+  </body>
+</html>

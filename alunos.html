@@ -1,9 +1,119 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="LR-EDUCA — Gestão Educacional"><title>Área de Alunos | LR-EDUCA</title><link rel="stylesheet" href="stylealunos.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head><body>
-<header class="header"><a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"></a><h3>Projeto Integrador II</h3><button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">☰</button><nav id="nav" class="nav-header"><a href="dash.html">Início</a><a href="alunos.html">Funcionalidades</a><button class="botao-nav" type="button"><a href="index.html">Sair</a></button></nav></header>
-<div class="app-layout"><aside class="sidebar"><div class="side-content"><h3 class="side-title">Gestão Educacional</h3><nav class="side-nav"><ul><li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a></li><li><a class="active" href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a></li><li><a href="#"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a></li><li><a href="#"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a></li><li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a></li><li><a href="#"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a></li><li><a href="#"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a></li><li><a href="#"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Reuniões</span></a></li><li><a href="#"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a></li><li><a href="#"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a></li><li><a href="#"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a></li></ul></nav></div></aside><main class="conteudo-principal"><div class="container"><div class="page-heading"><div><h1>Gestão de Alunos</h1><p>Consulte os indicadores e acesse as funções de cadastro.</p></div><a class="btn btn-primary" href="aluno-form.html">＋ Cadastrar aluno</a></div>
-<div class="cards" id="dashboard-counts"><article class="stat-card" data-count="alunos"><div class="label">Alunos cadastrados</div><div class="value">—</div><div class="hint">Registros disponíveis</div></article><article class="stat-card" data-count="professores"><div class="label">Professores</div><div class="value">—</div><div class="hint">Equipe pedagógica</div></article><article class="stat-card" data-count="turmas"><div class="label">Turmas cadastradas</div><div class="value">—</div><div class="hint">Organização escolar</div></article></div>
-<section class="panel"><div class="panel-head"><div><h2>Área do aluno</h2><p class="panel-subtitle">Escolha uma opção para continuar.</p></div></div><div class="quick-links"><a class="quick-link" href="aluno-form.html"><span class="quick-icon">＋</span><span><strong>Novo aluno</strong><small>Preencher dados cadastrais</small></span></a><a class="quick-link" href="alunos-lista.html"><span class="quick-icon">☷</span><span><strong>Listagem de alunos</strong><small>Pesquisar registros existentes</small></span></a><a class="quick-link" href="professores.html"><span class="quick-icon">♧</span><span><strong>Professores</strong><small>Acessar equipe docente</small></span></a></div></section>
-<div class="status-line"><span class="dot"></span> Interface preparada para integração com a API LR-EDUCA.</div></div></main></div><footer class="footer"><p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p></footer><script src="ui.js"></script><script>function toggleMenu(){document.getElementById("nav").classList.toggle("active");}</script>
-</body></html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LR-EDUCA — Gestão Educacional" />
+    <title>Área de Alunos | LR-EDUCA</title>
+    <link rel="stylesheet" href="stylealunos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header-logo" href="dash.html"><img src="assets/LogoLREduca.png" alt="Logo LR-Educa" width="190" height="50"/></a>
+      <h3>Projeto Integrador II</h3>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu"> ☰ </button>
+      <nav id="nav" class="nav-header">
+        <a href="dash.html">Início</a>
+        <a href="dash.html#funcionalidades">Funcionalidades</a>
+        <a href="dash.html#contato">Contato</a>
+        <button class="botao-nav" type="button"><a href="index.html">Sair</a>
+        </button>
+      </nav>
+    </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="side-content">
+          <h3 class="side-title">Gestão Educacional</h3>
+          <nav class="side-nav">
+            <ul>
+              <li><a href="dash.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+              </li>
+              <li><a class="active" href="alunos.html"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span>Alunos</span></a>
+              </li>
+              <li><a href="frequencia.html"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i><span>Frequência</span></a>
+              </li>
+              <li><a href="notas.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Notas</span></a>
+              </li>
+              <li><a href="planejar.html"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span>Planejamento</span></a>
+              </li>
+              <li><a href="relatorios.html"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Relatórios</span></a>
+              </li>
+              <li><a href="calendario.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a>
+              </li>
+              <li><a href="professores.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Professores</span></a>
+              </li>
+              <li><a href="notificacoes.html"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Notificações</span></a>
+              </li>
+              <li><a href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+              </li>
+              <li><a href="suporte.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Suporte</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="conteudo-principal">
+        <div class="container">
+          <div class="page-heading">
+            <div>
+              <h1>Gestão de Alunos</h1>
+              <p>Consulte os indicadores e acesse as funções de cadastro.</p>
+            </div>
+            <a class="btn btn-primary" href="aluno-form.html">＋ Cadastrar aluno</a>
+          </div>
+          <div class="cards" id="dashboard-counts">
+            <article class="stat-card" data-count="alunos">
+              <div class="label">Alunos cadastrados</div>
+              <div class="value">—</div>
+              <div class="hint">Registros disponíveis</div>
+            </article>
+            <article class="stat-card" data-count="professores">
+              <div class="label">Professores</div>
+              <div class="value">—</div>
+              <div class="hint">Equipe pedagógica</div>
+            </article>
+            <article class="stat-card" data-count="turmas">
+              <div class="label">Turmas cadastradas</div>
+              <div class="value">—</div>
+              <div class="hint">Organização escolar</div>
+            </article>
+          </div>
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Área do aluno</h2>
+                <p class="panel-subtitle">Escolha uma opção para continuar.</p>
+              </div>
+            </div>
+            <div class="quick-links">
+              <a class="quick-link" href="aluno-form.html">
+                <span class="quick-icon">＋</span>
+                <span><strong>Novo aluno</strong><small>Preencher dados cadastrais</small></span></a>
+              <a class="quick-link" href="alunos-lista.html">
+                <span class="quick-icon">☷</span>
+                <span><strong>Listagem de alunos</strong><small>Pesquisar registros existentes</small></span></a>
+              <a class="quick-link" href="professores.html">
+                <span class="quick-icon">♧</span>
+                <span><strong>Professores</strong><small>Acessar equipe docente</small></span></a>
+            </div>
+          </section>
+          <div class="status-line">
+            <span class="dot"></span> Interface preparada para integração com a
+            API LR-EDUCA.
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>LR-EDUCA © 2026 | Criadores: Grupo 01 Capitão de Campos - PI</p>
+    </footer>
+    <script src="ui.js"></script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
