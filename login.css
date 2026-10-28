@@ -1,114 +1,190 @@
-/* STILO LOGIN LR-EDUCA */
-    :root{
-      --verde:#1b8f4d;
-      --verde-claro:#2ecc71;
-      --escuro:#1f2933;
-      --cinza:#a2ec52;
-      --branco:#a2ec52;
-    }
+/* ESTILO LOGIN LR-EDUCA */
 
-    *{ box-sizing:border-box; }
+:root {
+  --verde: #1b8f4d;
+  --verde-claro: #2ecc71;
+  --escuro: #1f2933;
+  --cinza: #a2ec52;
+  --branco: #ffffff;
+}
 
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(135deg,var(--verde),var(--verde-claro));
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .login-container{
-      background:var(--branco);
-      width:100%;
-      max-width:380px;
-      padding:30px;
-      border-radius:12px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-    .login-container h1{
-      text-align:center;
-      margin-bottom:10px;
-    }
+.login-container {
+  background: var(--branco);
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
 
-    .login-container img{
-      max-width:160px;
-    }
+.login-container h1 {
+  text-align: center;
+  margin: 0 0 10px;
+}
 
-    .login-container p{
-      text-align:center;
-      font-size:14px;
-      margin-bottom:25px;
-      color:#555;
-    }
+.login-container img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+}
 
-    label{
-      font-size:14px;
-      font-weight:bold;
-    }
+.login-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #555;
+}
 
-    input, select{
-      width:100%;
-      padding:12px;
-      margin:8px 0 16px;
-      border-radius:6px;
-      border:1px solid #ccc;
-      font-size:14px;
-    }
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .btn{
-      width:100%;
-      padding:12px;
-      border:none;
-      border-radius:6px;
-      font-size:15px;
-      font-weight:bold;
-      cursor:pointer;
-    }
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
 
-    .btn-login{
-      background:var(--verde);
-      color:#fff;
-      margin-bottom:10px;
-    }
+input:focus,
+select:focus {
+  outline: 2px solid var(--verde-claro);
+  border-color: var(--verde);
+}
 
-    .btn-login:hover{
-      background:#15703c;
-    }
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .btn-voltar{
-      background:#e5e7eb;
-      color:#333;
-    }
+.btn-login {
+  background: var(--verde);
+  color: #fff;
+  margin-bottom: 10px;
+}
 
-    .btn-voltar:hover{
-      background:#d1d5db;
-    }
+.btn-login:hover {
+  background: #15703c;
+}
 
-    .links{
-      text-align:center;
-      margin-top:15px;
-    }
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
 
-    .links a{
-      font-size:13px;
-      color:var(--verde);
-      text-decoration:none;
-      font-weight:bold;
-    }
+.btn-voltar {
+  background: #e5e7eb;
+  color: #333;
+}
 
-    .links a:hover{
-      text-decoration:underline;
-    }
+.btn-voltar:hover {
+  background: #d1d5db;
+}
 
-    .footer-text{
-      text-align:center;
-      font-size:12px;
-      margin-top:20px;
-      color:#777;
-    }
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
 
-    
-  
+.links a {
+  font-size: 13px;
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.mensagem {
+  display: none;
+  font-size: 13px !important;
+  line-height: 1.5;
+  margin: 0 0 15px !important;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.mensagem.erro {
+  display: block;
+  background: #fde8e8;
+  color: #a61b1b;
+}
+
+.mensagem.sucesso {
+  display: block;
+  background: #e4f7e9;
+  color: #176b35;
+}
+
+
+/* Campo de senha com botão mostrar/ocultar */
+
+.senha-container {
+  position: relative;
+  width: 100%;
+  margin: 8px 0 16px;
+}
+
+.senha-container input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 85px 12px 12px;
+}
+
+.btn-senha {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--verde);
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.btn-senha:hover {
+  text-decoration: underline;
+}
+
+.btn-senha:focus-visible {
+  outline: 2px solid var(--verde);
+  border-radius: 4px;
+}
+
+
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #777;
+}

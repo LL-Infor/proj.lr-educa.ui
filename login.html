@@ -1,59 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOGIN LR-EDUCA | Gestão Educacional</title>
-  <link rel="stylesheet" href="login.css" /> 
-
-  </head>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
 
 <body>
+  <div class="login-container">
 
-<div class="login-container">
+    <h1>
+      <img src="assets/LogoLREducagren.png" alt="Logo LR-EDUCA">
+    </h1>
 
-  <h1>
-    <img src="assets/LogoLREduca.png" alt="Logo LR-EDUCA">
-  </h1>
+    <p>Acesso ao Sistema de Gestão Educacional</p>
 
-  <p>Acesso ao Sistema de Gestão Educacional</p>
+    <form id="formLogin">
 
-  <form action="dash.html" method="post">
+      <label for="perfil">Perfil de Acesso</label>
+      <select id="perfil" name="perfil" required>
+        <option value="">Selecione o perfil</option>
+        <option value="ADMIN">Admin(a)</option>
+        <option value="DIRETOR">Diretor(a)</option>
+        <option value="SUPERVISOR">Supervisor(a)</option>
+        <option value="PROFESSOR">Professor(a)</option>
+        <option value="COORDENADOR">Coordenador(a)</option>
+        <option value="SECRETARIO">Secretário(a)</option>
+      </select>
 
-    <label for="perfil">Perfil de Acesso</label>
-    <select id="perfil" name="perfil" required>
-      <option value="">Selecione o perfil</option>
-      <option>Diretor(a)</option>
-      <option>Supervisor(a)</option>
-      <option>Professor(a)</option>
-      <option>Coordenador(a)</option>
-      <option>Secretário(a)</option>
-    </select>
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="email@instituicao.com"
+        autocomplete="username"
+        required
+      >
 
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" placeholder="email@instituicao.com" required />
+      <label for="senha">Senha</label>
 
-    <label for="senha">Senha</label>
-    <input type="password" id="senha" name="senha" placeholder="********" required />
+    <div class="senha-container">
+      <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        autocomplete="current-password"
+        required
+      >
 
-    <button type="submit" class="btn btn-login" onclick="window.location.href='./dash.html'">Entrar</button>
-
-    <button type="button" class="btn btn-voltar" onclick="window.location.href='./index.html'">
-      Voltar
-    </button>
-
-    <div class="links">
-      <a href="./esqueci-senha.html">Esqueci minha senha</a>
+      <button
+        type="button"
+        id="toggleSenha"
+        class="btn-senha"
+        aria-label="Mostrar senha"
+        aria-pressed="false"
+      >
+        Mostrar
+      </button>
     </div>
 
-  </form>
+      <p id="mensagem" class="mensagem" role="alert" aria-live="polite"></p>
 
-  <div class="footer-text">
-    LR-EDUCA © 2026<br>
-    Criadores: Grupo 01 – Capitão de Campos - PI
+      <button type="submit" id="btnEntrar" class="btn btn-login">
+        Entrar
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-voltar"
+        onclick="window.location.href='./index.html'">
+        Voltar
+      </button>
+
+      <div class="links">
+        <a href="./esqueci-senha.html">Esqueci minha senha</a>
+      </div>
+
+    </form>
+
+    <div class="footer-text">
+      LR-EDUCA © 2026<br>
+      Criadores: Grupo 01 – Capitão de Campos - PI
+    </div>
+
   </div>
-
-</div>
-
 </body>
 </html>
